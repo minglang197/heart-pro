@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes heart {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+        }
+
+        .container {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100px;
+            animation: heart 1.5s .5s infinite backwards;
+        }
+
+        .container .left {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            left: 0;
+            top: 0;
+            border-radius: 50% 0 0 50%;
+            transform: translateY(50px) rotate(45deg);
+
+        }
+
+        .container .right {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            right: 0;
+            top: 0;
+            border-radius: 0 50% 50% 0;
+            transform: translateY(50px) rotate(-45deg);
+        }
+
+        .container .bottom {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            bottom: 0;
+            left: 50%;
+            border-radius: 0 0 20px 0;
+            transform: translateX(-50%) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+
+</html>
